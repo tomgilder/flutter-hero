@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             leading: Icon(Icons.announcement),
             title: Text('Show onboarding'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, '/');
+              Navigator.pushReplacementNamed(context, '/onboarding');
             },
           ),
           ListTile(

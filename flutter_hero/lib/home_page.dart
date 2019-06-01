@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hero/people_page.dart';
+
+import 'events_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -32,8 +35,8 @@ class HomePage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Container(),
-              Container(),
+              EventsPage(),
+              PeoplePage(),
             ],
           ),
         ),

@@ -6,7 +6,7 @@ import 'package:fancy_on_boarding/page_model.dart';
  final pageList = [
     PageModel(
         color: const Color(0xFF000000),
-        heroAssetPath: 'assets/onboarding1a.png',
+        heroAssetPath: 'assets/onboarding1.png',
         title: Text('Flutter Hero',
             style: TextStyle(
               fontWeight: FontWeight.w800,
@@ -19,27 +19,31 @@ import 'package:fancy_on_boarding/page_model.dart';
               color: Colors.white,
               fontSize: 18.0,
             )),
-        iconAssetPath: 'assets/onboarding1b.png'),
+        iconAssetPath: 'assets/onboarding1_icon.png'),
     PageModel(
         color: const Color(0xFF65B0B4),
-        heroAssetPath: 'assets/onboarding2a.png',
-        title: Text('Banks',
+        heroAssetPath: 'assets/onboarding2.png',
+        title: Text('Do you need someone to speak at your local Flutter meetup?',
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w800,
               color: Colors.white,
               fontSize: 34.0,
             )),
-        body: Text(
-            'We carefully verify all banks before adding them into the app',
+        body: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
+            'If you are hosing a tech meetup, and lacking experts to speak at it. You can find them at "Flutter Hero"!',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
               fontSize: 18.0,
             )),
-        iconAssetPath: 'assets/onboarding2b.png'),
+        ),
+        iconAssetPath: 'assets/onboarding1_icon.png'),
     PageModel(
       color: const Color(0xFF9B90BC),
-      heroAssetPath: 'assets/onboarding3a.png',
+      heroAssetPath: 'assets/onboarding3.png',
       title: Text('Store',
           style: TextStyle(
             fontWeight: FontWeight.w800,
@@ -52,7 +56,7 @@ import 'package:fancy_on_boarding/page_model.dart';
             color: Colors.white,
             fontSize: 18.0,
           )),
-      iconAssetPath: 'assets/onboarding3b.png',
+      iconAssetPath: 'assets/onboarding1_icon.png',
     ),
 ];
 

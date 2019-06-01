@@ -8,6 +8,20 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: new FloatingActionButton(
+        child: Icon(
+          Icons.save,
+          color: Colors.white,
+          size: 30.0,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, '/');
+        },
+    ),
+
+    // Here's the new attribute:
+
       body: NestedScrollView(
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[

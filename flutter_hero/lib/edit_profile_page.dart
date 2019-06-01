@@ -83,7 +83,7 @@ class EditProfilePage extends StatelessWidget {
             ),
             FormBuilderCheckbox(
               attribute: 'is_expert',
-              initialValue: false,
+              initialValue: true,
               label: Text("I am a legit HERO who has totally 10 years of experience in Flutter"),
               validators: [
                 FormBuilderValidators.requiredTrue(

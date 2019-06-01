@@ -29,6 +29,7 @@ class EditProfilePage extends StatelessWidget {
             expandedHeight: 400.0,
             floating: false,
             pinned: true,
+            automaticallyImplyLeading: true,
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               title: Text(

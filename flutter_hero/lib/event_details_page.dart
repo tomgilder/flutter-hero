@@ -29,7 +29,10 @@ class EventDetailsPage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: Colors.white),
               ),
-              background: Image.network(event.imageUrl),
+              background: FittedBox(
+                fit: BoxFit.cover,
+                child: Image.network(event.imageUrl),
+              ),
             ),
           ),
         ];

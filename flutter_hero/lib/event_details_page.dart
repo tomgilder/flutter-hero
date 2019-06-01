@@ -13,6 +13,19 @@ class EventDetailsPage extends StatelessWidget {
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverAppBar(
+            leading: Center(
+              child: Container(
+                decoration: new BoxDecoration(
+                    color: Colors.blueAccent.withOpacity(0.7),
+                    borderRadius: new BorderRadius.all(Radius.circular(40.0))),
+                child: new IconButton(
+                  icon: new Icon(
+                    Icons.arrow_back,
+                  ),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+              ),
+            ),
             expandedHeight: 200.0,
             floating: false,
             pinned: true,
@@ -32,8 +45,7 @@ class EventDetailsPage extends StatelessWidget {
       body: ListView(children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-          child: Text(
-              event.description,
+          child: Text(event.description,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
         ),

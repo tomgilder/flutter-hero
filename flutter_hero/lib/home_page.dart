@@ -46,16 +46,17 @@ class HomePage extends StatelessWidget {
               tabs: [
                 Tab(
                   icon: Icon(Icons.calendar_today),
+                  text: "Events",
                 ),
                 Tab(
                   icon: Icon(Icons.person),
+                  text: "Heroes",
                 )
               ],
-              labelColor: Colors.black,
-              unselectedLabelColor: Colors.blue,
-              indicatorSize: TabBarIndicatorSize.label,
+              labelColor: Colors.blue,
+              unselectedLabelColor: Colors.black,
               indicatorPadding: EdgeInsets.all(5.0),
-              indicatorColor: Colors.black,
+              indicatorColor: Colors.blue,
             ),
           ),
           appBar: AppBar(

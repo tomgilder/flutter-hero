@@ -44,6 +44,14 @@ class EditProfilePage extends StatelessWidget {
           key: _fbKey,
           autovalidate: true,
           child: Column(children: <Widget>[
+            FormBuilderTextField(
+              attribute: "name",
+              decoration: InputDecoration(labelText: "Name"),
+              initialValue: 'Iiro Krankka',
+              validators: [
+                FormBuilderValidators.max(70),
+              ],
+            ),
             FormBuilderCheckbox(
               attribute: 'is_expert',
               initialValue: false,
@@ -53,6 +61,21 @@ class EditProfilePage extends StatelessWidget {
                   errorText: "You must be a hero to speak at meetups",
                 ),
               ],
+            ),
+            FormBuilderRadio(
+              decoration: InputDecoration(labelText: 'The best programming language'),
+              leadingInput: true,
+              attribute: "best_language",
+              validators: [FormBuilderValidators.required()],
+              options: [
+                "Dart",
+                "Kotlin",
+                "Java",
+                "Swift",
+                "Objective-C"
+              ]
+                .map((lang) => FormBuilderFieldOption(value: lang))
+                .toList(growable: false),
             )
           ])),
         )

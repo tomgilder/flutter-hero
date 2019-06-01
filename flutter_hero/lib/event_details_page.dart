@@ -26,7 +26,8 @@ class EventDetailsPage extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: Colors.white),
                 ),
-                background: Image.asset("assets/event_logo.png")),
+                background: Image.network(event.imageUrl),
+            ),
           ),
         ];
       },

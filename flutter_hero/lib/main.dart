@@ -4,6 +4,7 @@ import 'home_page.dart';
 import './models/event.dart';
 import './mocks/eventsList.dart';
 import './event_details_page.dart';
+import './edit_profile_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/onboarding',
       routes: {
         '/': (context) => HomePage(),
-        '/onboarding': (context) => OnboardingPage()
+        '/onboarding': (context) => OnboardingPage(),
+        '/edit_profile': (context) => EditProfilePage()
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');

@@ -12,7 +12,7 @@ class EventCard extends StatelessWidget {
     return Card(
       child: InkWell(
         onTap: () =>
-            Navigator.pushNamed<bool>(context, '/event/' + event.title),
+            Navigator.pushNamed<bool>(context, '/event/' + event.id),
         child: Padding(
           padding: EdgeInsets.all(12.0),
           child: Column(

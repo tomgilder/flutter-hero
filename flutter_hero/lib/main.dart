@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'onboarding_page.dart';
 import 'home_page.dart';
+import './models/event.dart';
+import './mocks/eventsList.dart';
+import './event_details_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +16,21 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/onboarding': (context) => OnboardingPage()
-      }
+      },
+      onGenerateRoute: (RouteSettings settings) {
+        final List<String> pathElements = settings.name.split('/');
+        if (pathElements[0] != '') {
+          return null;
+        }
+        if (pathElements[1] == 'event') {
+          final Event event =
+              eventsListMock.firstWhere((event) => event.id == pathElements[2]);
+          return MaterialPageRoute<bool>(
+            builder: (BuildContext context) => EventDetailsPage(event),
+          );
+        }
+        return null;
+      },
     );
   }
 }

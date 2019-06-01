@@ -2,6 +2,7 @@ import '../models/event.dart';
 
 List<Event> eventsListMock = [
   Event(
+    id: "0001",
     title: "Dart conf 2019",
     country: "USA",
     city: "New York",
@@ -13,6 +14,7 @@ List<Event> eventsListMock = [
     date: new DateTime(2019, 7, 29),
   ),
   Event(
+    id: "0002",
     title: "Flutter California",
     country: "USA",
     city: "Sacramento",
@@ -23,6 +25,7 @@ List<Event> eventsListMock = [
     date: new DateTime(2019, 8, 17),
   ),
   Event(
+    id: "0003",
     title: "Flutter Helsinki",
     country: "Finland",
     city: "Helsinki",
@@ -33,6 +36,7 @@ List<Event> eventsListMock = [
     date: new DateTime(2019, 9, 22),
   ),
   Event(
+    id: "0004",
     title: "Flutter Oslo",
     country: "Norway",
     city: "Oslo",
@@ -43,6 +47,7 @@ List<Event> eventsListMock = [
     date: new DateTime(2019, 12, 19),
   ),
   Event(
+    id: "0005",
     title: "Fluttery Dart 2019",
     country: "Germany",
     city: "Düsseldorf",

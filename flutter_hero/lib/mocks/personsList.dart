@@ -27,4 +27,10 @@ List<Person> personsListMock = [
       bio: "Dash is a bird",
       photoUrl:
           "https://yt3.ggpht.com/a/AGF-l7_p35s8NY-EOwhcv9cgmj1RB2s4jkQyR7YoKQ=s900-mo-c-c0xffffffff-rj-k-no"),
+  Person(
+      id: "flute",
+      name: "Flute",
+      bio: "Flute is a musical instrument",
+      photoUrl:
+          "https://www.thomann.de/pics/bdb/200878/12716832_800.jpg"),
 ];

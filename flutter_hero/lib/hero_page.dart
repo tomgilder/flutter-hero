@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'models/person.dart';
+
 class HeroPage extends StatelessWidget {
+
+  final Person person;
+
+  HeroPage({@required this.person});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +21,7 @@ class HeroPage extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               title: Text(
-                "Iiro Krankka",
+                person.name,
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -22,12 +29,11 @@ class HeroPage extends StatelessWidget {
               ),
               background: Center(
                 child: Hero(
-                  tag: "1",
+                  tag: person.id,
                   child: CircleAvatar(
                       minRadius: 90,
                       maxRadius: 140,
-                      backgroundImage: NetworkImage(
-                          "https://pbs.twimg.com/profile_images/973827258787028992/dNNF4hEa_400x400.jpg")),
+                      backgroundImage: NetworkImage(person.photoUrl)),
                 ),
               ),
             ),
@@ -38,7 +44,7 @@ class HeroPage extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
           child: Text(
-              "Mobile/Frontend Lead at Reflectly, and a Google Developer Expert for Flutter and Dart",
+              person.bio,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
 
@@ -7,7 +8,7 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: NestedScrollView(
+      body: NestedScrollView(
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverAppBar(
@@ -44,6 +45,20 @@ class EditProfilePage extends StatelessWidget {
           key: _fbKey,
           autovalidate: true,
           child: Column(children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(6),
+              child: RaisedButton(
+                child: Text('Link Google© Calendar™'),
+                onPressed: () async {
+                  const url = 'https://en.wikipedia.org/wiki/Google_Calendar';
+                  if (await canLaunch(url)) {
+                    await launch(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+              ),
+            ),
             FormBuilderTextField(
               attribute: "name",
               decoration: InputDecoration(labelText: "Name"),

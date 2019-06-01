@@ -5,15 +5,15 @@ import 'package:fancy_on_boarding/page_model.dart';
 
  final pageList = [
     PageModel(
-        color: const Color(0xFF678FB4),
+        color: const Color(0xFF000000),
         heroAssetPath: 'assets/onboarding1a.png',
-        title: Text('Hotels',
+        title: Text('Flutter Hero',
             style: TextStyle(
               fontWeight: FontWeight.w800,
               color: Colors.white,
-              fontSize: 34.0,
+              fontSize: 40.0,
             )),
-        body: Text('All hotels and hostels are sorted by hospitality rating',
+        body: Text('Welcome to Flutter Hero!',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,

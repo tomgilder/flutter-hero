@@ -44,18 +44,77 @@ import 'package:fancy_on_boarding/page_model.dart';
     PageModel(
       color: const Color(0xFF9B90BC),
       heroAssetPath: 'assets/onboarding3.png',
-      title: Text('Store',
+      title: Text('Find A Flutter Hero!',
           style: TextStyle(
             fontWeight: FontWeight.w800,
             color: Colors.white,
             fontSize: 34.0,
           )),
-      body: Text('All local stores are categorized for your convenience',
+      body: Text('Find the Flutter Expert who can speak at your meetup',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
             fontSize: 18.0,
           )),
+      iconAssetPath: 'assets/onboarding1_icon.png',
+    ),
+    PageModel(
+      color: const Color(0xFF1bFFBC),
+      heroAssetPath: 'assets/onboarding4.jpg',
+      title: Text('List Your Event',
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            color: Colors.pink,
+            fontSize: 34.0,
+          )),
+      body: Text('Add your upcoming event so heros may want speak at it',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.pink,
+            fontSize: 18.0,
+          )),
+      iconAssetPath: 'assets/onboarding1_icon.png',
+    ),
+    PageModel(
+      color: const Color(0xFF1b90FF),
+      heroAssetPath: 'assets/onboarding5.jpg',
+      title: Text('Browse through top notch heros!',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            color: Colors.white,
+            fontSize: 34.0,
+          )),
+      body: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('Browse list of amazing experts with 10+ years experience in Flutter. View their details and the locations they would want to speak at',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18.0,
+          )),
+      ),
+      iconAssetPath: 'assets/onboarding1_icon.png',
+    ),
+    PageModel(
+      color: const Color(0xFF1b1b1b),
+      heroAssetPath: 'assets/onboarding6.png',
+      title: Text('This is the end of Onboarding!',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            color: Colors.white,
+            fontSize: 34.0,
+          )),
+      body: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('It is finally over! Just tap or swipe one more time.',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18.0,
+          )),
+      ),
       iconAssetPath: 'assets/onboarding1_icon.png',
     ),
 ];

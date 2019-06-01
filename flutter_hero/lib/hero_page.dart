@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_hero/book_page.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'models/person.dart';
 
 class HeroPage extends StatelessWidget {
@@ -11,7 +12,14 @@ class HeroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: NestedScrollView(
+      floatingActionButton: Padding(
+        padding: EdgeInsets.only(bottom: 20),
+        child: FloatingActionButton.extended(
+        onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => BookPage(person: person))),
+        icon: Icon(Icons.add),
+        label: Text("Book"),
+      )),
+      body: NestedScrollView(
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverAppBar(
@@ -48,7 +56,25 @@ class HeroPage extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
         ),
+
         SizedBox(height: 10),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+
+            IconButton(
+              icon: new Icon(FontAwesomeIcons.twitter), 
+              onPressed: () { }
+            ),
+
+            IconButton(
+              icon: new Icon(FontAwesomeIcons.stackOverflow), 
+              onPressed: () { }
+            )
+        ]),
+
+        
         Container(
           color: Colors.white,
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),

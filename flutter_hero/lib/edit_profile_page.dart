@@ -16,7 +16,7 @@ class EditProfilePage extends StatelessWidget {
           size: 30.0,
         ),
         onPressed: () {
-          Navigator.pushNamed(context, '/');
+          Navigator.pushReplacementNamed(context, '/');
         },
     ),
 
@@ -39,13 +39,12 @@ class EditProfilePage extends StatelessWidget {
                     color: Colors.white),
               ),
               background: Center(
-                child: Hero(
-                  tag: "1",
-                  child: CircleAvatar(
-                      minRadius: 90,
-                      maxRadius: 140,
-                      backgroundImage: NetworkImage(
-                          "https://pbs.twimg.com/profile_images/973827258787028992/dNNF4hEa_400x400.jpg")),
+                child: CircleAvatar(
+                    minRadius: 90,
+                    maxRadius: 140,
+                    backgroundImage: NetworkImage(
+                      "https://pbs.twimg.com/profile_images/973827258787028992/dNNF4hEa_400x400.jpg"
+                    ),
                 ),
               ),
             ),

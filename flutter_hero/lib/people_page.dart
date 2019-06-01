@@ -13,8 +13,14 @@ class PeoplePage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => HeroPage()),
               ),
             child: ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Iiro'),
+            leading: Hero(
+              tag: "1",
+              child: CircleAvatar(
+                minRadius: 20,
+                maxRadius: 20,
+                backgroundImage: NetworkImage("https://pbs.twimg.com/profile_images/973827258787028992/dNNF4hEa_400x400.jpg")
+            )),
+            title: Text('Iiro Krankka'),
           ),
         ),
         ListTile(

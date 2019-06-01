@@ -5,6 +5,7 @@ class Event {
   final String city;
   final String url;
   final String description;
+  final String imageUrl;
   final num enrolledSpeakers;
   final num maxSpeakers;
   final List<String> speakerProfiles;
@@ -17,6 +18,7 @@ class Event {
     this.city,
     this.url,
     this.description,
+    this.imageUrl,
     this.enrolledSpeakers,
     this.maxSpeakers,
     this.speakerProfiles,

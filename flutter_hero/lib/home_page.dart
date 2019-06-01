@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
             leading: Icon(Icons.edit),
             title: Text('Edit profile'),
             onTap: () {
-              Navigator.pushReplacementNamed(context, '/edit_profile');
+              Navigator.pushNamed(context, '/edit_profile');
             },
           ),
         ],

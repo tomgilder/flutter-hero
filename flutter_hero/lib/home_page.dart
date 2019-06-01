@@ -2,6 +2,34 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+
+  Widget _buildSideDrawer(BuildContext context) {
+    return Drawer(
+      child: Column(
+        children: <Widget>[
+          AppBar(
+            automaticallyImplyLeading: false,
+            title: Text('Menu'),
+          ),
+          ListTile(
+            leading: Icon(Icons.announcement),
+            title: Text('Show onboarding'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.edit),
+            title: Text('Edit profile'),
+            onTap: () {
+              Navigator.pushReplacementNamed(context, '/edit_profile');
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -9,6 +37,7 @@ class HomePage extends StatelessWidget {
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
+          drawer: _buildSideDrawer(context),
           bottomNavigationBar: SafeArea(
             child: TabBar(
               tabs: [
@@ -28,7 +57,6 @@ class HomePage extends StatelessWidget {
           ),
           appBar: AppBar(
             title: Text('Flutter Hero'),
-            automaticallyImplyLeading: false
           ),
           body: TabBarView(
             children: [

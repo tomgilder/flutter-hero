@@ -11,6 +11,13 @@ List<Event> eventsListMock = [
     url: "https://dartconf.com",
     enrolledSpeakers: 5,
     maxSpeakers: 8,
+    speakerProfiles: [
+      'speaker001',
+      'speaker002',
+      'speaker003',
+      'speaker004',
+      'speaker005'
+    ],
     date: new DateTime(2019, 7, 29),
   ),
   Event(
@@ -22,6 +29,17 @@ List<Event> eventsListMock = [
     url: "https://fluttercalifornia.com",
     enrolledSpeakers: 9,
     maxSpeakers: 15,
+    speakerProfiles: [
+      'speaker001',
+      'speaker002',
+      'speaker003',
+      'speaker004',
+      'speaker005',
+      'speaker006',
+      'speaker007',
+      'speaker008',
+      'speaker009',
+    ],
     date: new DateTime(2019, 8, 17),
   ),
   Event(
@@ -33,6 +51,13 @@ List<Event> eventsListMock = [
     url: "https://flutterhelsinki.com",
     enrolledSpeakers: 5,
     maxSpeakers: 10,
+    speakerProfiles: [
+      'speaker001',
+      'speaker002',
+      'speaker003',
+      'speaker004',
+      'speaker005'
+    ],
     date: new DateTime(2019, 9, 22),
   ),
   Event(
@@ -44,6 +69,11 @@ List<Event> eventsListMock = [
     url: "https://flutteroslo.com",
     enrolledSpeakers: 3,
     maxSpeakers: 8,
+    speakerProfiles: [
+      'speaker001',
+      'speaker002',
+      'speaker003',
+    ],
     date: new DateTime(2019, 12, 19),
   ),
   Event(
@@ -55,6 +85,19 @@ List<Event> eventsListMock = [
     url: "https://flutterdusseldorf.com",
     enrolledSpeakers: 11,
     maxSpeakers: 12,
+    speakerProfiles: [
+      'speaker001',
+      'speaker002',
+      'speaker003',
+      'speaker004',
+      'speaker005',
+      'speaker006',
+      'speaker007',
+      'speaker008',
+      'speaker009',
+      'speaker010',
+      'speaker011',
+    ],
     date: new DateTime(2019, 7, 18),
   )
 ];

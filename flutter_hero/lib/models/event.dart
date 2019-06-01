@@ -7,6 +7,7 @@ class Event {
   final String description;
   final num enrolledSpeakers;
   final num maxSpeakers;
+  final List<String> speakerProfiles;
   final DateTime date;
 
   Event({
@@ -18,6 +19,7 @@ class Event {
     this.description,
     this.enrolledSpeakers,
     this.maxSpeakers,
+    this.speakerProfiles,
     this.date,
   });
 }

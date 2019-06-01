@@ -20,7 +20,7 @@ class OnboardingPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage(), settings: RouteSettings()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
               ),

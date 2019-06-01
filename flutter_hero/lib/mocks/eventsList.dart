@@ -8,6 +8,7 @@ List<Event> eventsListMock = [
     city: "New York",
     description:
         "Best dart conf in the world, so good you won't believe it, lorem ipsum blah blah blah.",
+    imageUrl: "https://lh3.googleusercontent.com/hLlnjfRfPV8m4dbpA-cJtn69vX7PRWdTRcc9Ijh_LKmuk3YKLf0hlWKvLJakdwlb75agMVgxjbbRFd9894LlVhEmAx2MYh4=s688",
     url: "https://dartconf.com",
     enrolledSpeakers: 5,
     maxSpeakers: 8,
@@ -26,6 +27,7 @@ List<Event> eventsListMock = [
     country: "USA",
     city: "Sacramento",
     description: "Example description of Sacramento Flutter conference",
+    imageUrl: "http://www.laspositascollege.edu/gv/pdc/assets/images/conference.jpg",
     url: "https://fluttercalifornia.com",
     enrolledSpeakers: 9,
     maxSpeakers: 15,
@@ -48,6 +50,7 @@ List<Event> eventsListMock = [
     country: "Finland",
     city: "Helsinki",
     description: "Example description of Helsinki Flutter conference",
+    imageUrl: "https://cdn.oreillystatic.com/en/assets/1/event/294/velocityca2019_og_image.jpg",
     url: "https://flutterhelsinki.com",
     enrolledSpeakers: 5,
     maxSpeakers: 10,
@@ -66,6 +69,7 @@ List<Event> eventsListMock = [
     country: "Norway",
     city: "Oslo",
     description: "Example description of Oslo Flutter conference",
+    imageUrl: "https://live.staticflickr.com/5557/15053958542_e68eea599f_b.jpg",
     url: "https://flutteroslo.com",
     enrolledSpeakers: 3,
     maxSpeakers: 8,
@@ -82,6 +86,7 @@ List<Event> eventsListMock = [
     country: "Germany",
     city: "Düsseldorf",
     description: "Example description of Düsseldorf Flutter conference",
+    imageUrl: "https://static1.squarespace.com/static/55115f04e4b0f4baa9ed963c/t/5b61ad7388251bdab3de1a16/1533201518204/conference+image+resize.jpg?format=1500w",
     url: "https://flutterdusseldorf.com",
     enrolledSpeakers: 11,
     maxSpeakers: 12,
@@ -99,5 +104,5 @@ List<Event> eventsListMock = [
       'speaker011',
     ],
     date: new DateTime(2019, 7, 18),
-  )
+  ),
 ];

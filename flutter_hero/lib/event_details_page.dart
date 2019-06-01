@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hero/models/event.dart';
+import 'package:flutter_hero/models/person.dart';
 import 'package:intl/intl.dart';
+import './widgets/speaker_card.dart';
+import './mocks/personsList.dart';
 
 class EventDetailsPage extends StatelessWidget {
   final Event event;
@@ -14,39 +17,26 @@ class EventDetailsPage extends StatelessWidget {
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverAppBar(
-            leading: Center(
-              child: Container(
-                decoration: new BoxDecoration(
-                    color: Colors.blueAccent.withOpacity(0.7),
-                    borderRadius: new BorderRadius.all(Radius.circular(40.0))),
-                child: new IconButton(
-                  icon: new Icon(
-                    Icons.arrow_back,
-                  ),
-                  onPressed: () => Navigator.of(context).pop(),
-                ),
-              ),
-            ),
             expandedHeight: 200.0,
             floating: false,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: Text(
-                  event.title,
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white),
-                ),
-                background: Image.network(event.imageUrl),
+              centerTitle: true,
+              title: Text(
+                event.title,
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
+              ),
+              background: Image.network(event.imageUrl),
             ),
           ),
         ];
       },
-      body: ListView(children: <Widget>[
+      body: Column(children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           child: Column(
             children: <Widget>[
               Row(
@@ -81,26 +71,31 @@ class EventDetailsPage extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 6.0),
                 child: Text(event.description,
                     textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 16,)),
+                    style: TextStyle(
+                      fontSize: 16,
+                    )),
               ),
             ],
           ),
         ),
         SizedBox(height: 20),
-        Container(
-          color: Colors.white,
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(bottom: 18),
-                  child: Text(
-                    event.speakerProfiles.join('\n'),
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ]),
+        Text(
+          'Speakers',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            padding: const EdgeInsets.all(12.0),
+            itemCount: event.speakerProfiles.length,
+            itemBuilder: (context, i) {
+              final Person person = personsListMock.firstWhere(
+                  (person) => person.id == event.speakerProfiles[i]);
+              return SpeakerCard(person);
+            },
+          ),
         )
       ]),
     ));

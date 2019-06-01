@@ -86,4 +86,19 @@ List<Event> eventsListMock = [
     ],
     date: new DateTime(2019, 7, 18),
   ),
+  Event(
+    id: "0006",
+    title: "Flutecon '19",
+    country: "Flutistan",
+    city: "Flutington",
+    description: "There will be music",
+    imageUrl: "https://billymiller.files.wordpress.com/2009/11/flute-set-71.jpg",
+    url: "https://en.wikipedia.org/wiki/Flute",
+    enrolledSpeakers: 1,
+    maxSpeakers: 2,
+    speakerProfiles: [
+      'flute',
+    ],
+    date: new DateTime(2019, 7, 30),
+  ),
 ];

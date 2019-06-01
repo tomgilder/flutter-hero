@@ -68,13 +68,14 @@ class _BookPageState extends State<BookPage> {
             ])
         ),
        
+        SizedBox(height: 30,),
 
         BookStep(
           onTap: () => setState(() => step = 1),
           enabled: step == 1,
           title: "When?",
           child: Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 0),
             child: CalendarCarousel(
               
               // current: DateTime.now(),
@@ -82,7 +83,7 @@ class _BookPageState extends State<BookPage> {
               //   this.setState(() => _currentDate = date);
               // },
               thisMonthDayBorderColor: Colors.grey,
-              height: 420.0,
+              height: 400.0,
               daysHaveCircularBorder: false,
 
               /// null for not rendering any border, true for circular border, false for rectangular border
@@ -98,7 +99,9 @@ class _BookPageState extends State<BookPage> {
           ),
         ),
 
+        SizedBox(height: 30,),
 
+        
       ]),
     ));
   }

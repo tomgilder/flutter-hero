@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hero/event_details_page.dart';
 
 import './models/event.dart';
 import './mocks/eventsList.dart';
